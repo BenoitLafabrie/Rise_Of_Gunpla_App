@@ -1,13 +1,20 @@
 import * as React from "react";
+import { useCallback } from "react";
+import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   useFonts,
   Lato_100Thin,
+  Lato_100Thin_Italic,
   Lato_300Light,
+  Lato_300Light_Italic,
   Lato_400Regular,
+  Lato_400Regular_Italic,
   Lato_700Bold,
+  Lato_700Bold_Italic,
   Lato_900Black,
+  Lato_900Black_Italic,
 } from "@expo-google-fonts/lato";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -21,15 +28,27 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
     Lato_100Thin,
+    Lato_100Thin_Italic,
     Lato_300Light,
+    Lato_300Light_Italic,
     Lato_400Regular,
+    Lato_400Regular_Italic,
     Lato_700Bold,
+    Lato_700Bold_Italic,
     Lato_900Black,
+    Lato_900Black_Italic,
   });
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded, fontError]);
 
   if (!fontsLoaded && !fontError) {
     return null;
   }
+
   return (
     <NavigationContainer>
       <Tab.Navigator
