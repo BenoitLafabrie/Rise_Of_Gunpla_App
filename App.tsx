@@ -1,6 +1,14 @@
 import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  useFonts,
+  Lato_100Thin,
+  Lato_300Light,
+  Lato_400Regular,
+  Lato_700Bold,
+  Lato_900Black,
+} from "@expo-google-fonts/lato";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import HomeScreen from "./Screens/HomeScreen";
@@ -10,8 +18,18 @@ import WishlistScreen from "./Screens/WishlistScreen";
 import AccountScreen from "./Screens/AccountScreen";
 
 const Tab = createBottomTabNavigator();
-
 export default function App() {
+  let [fontsLoaded, fontError] = useFonts({
+    Lato_100Thin,
+    Lato_300Light,
+    Lato_400Regular,
+    Lato_700Bold,
+    Lato_900Black,
+  });
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
   return (
     <NavigationContainer>
       <Tab.Navigator
