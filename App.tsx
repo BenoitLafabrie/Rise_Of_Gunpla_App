@@ -2,7 +2,10 @@ import * as React from "react";
 import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  BottomTabHeaderProps,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 import {
   useFonts,
   Lato_100Thin,
@@ -18,6 +21,7 @@ import {
 } from "@expo-google-fonts/lato";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
+import Logo from "./components/Logo";
 import HomeScreen from "./Screens/HomeScreen";
 import ExploreScreen from "./Screens/ExploreScreen";
 import CartScreen from "./Screens/CartScreen";
@@ -39,7 +43,7 @@ export default function App() {
     Lato_900Black_Italic,
   });
 
-  const onLayoutRootView = useCallback(async () => {
+  const onLayoutRootView = useCallback(async (): Promise<void> => {
     if (fontsLoaded || fontError) {
       await SplashScreen.hideAsync();
     }
@@ -53,6 +57,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
+          header: () => <Logo />,
           tabBarActiveTintColor: "#FB0041",
           tabBarInactiveTintColor: "#151515",
         }}
