@@ -31,13 +31,24 @@ const Item = ({ name }: ItemProps) => (
     <Text style={styles.name}>{name}</Text>
   </View>
 );
+
+const Footer = ({ name }: ItemProps) => (
+  <View style={styles.footer}>
+    <Text style={styles.name}>{name}</Text>
+  </View>
+);
 export default function NewList() {
   return (
     <View style={styles.container}>
       <Text style={styles.title_section}>New</Text>
       <FlatList
         data={DATA}
-        renderItem={({ item }) => <Item name={item.name} />}
+        renderItem={({ item }) => (
+          <View style={styles.item_container}>
+            <Item name={item.name} />
+            <Footer name={item.name} />
+          </View>
+        )}
         keyExtractor={(item) => item.id}
         horizontal={true}
       />
@@ -67,5 +78,12 @@ const styles = StyleSheet.create({
     fontSize: 42,
     color: "#FB0041",
     backgroundColor: "#fff",
+  },
+  item_container: {
+    flex: 1,
+  },
+  footer: {
+    paddingTop: 8,
+    paddingLeft: 8,
   },
 });
