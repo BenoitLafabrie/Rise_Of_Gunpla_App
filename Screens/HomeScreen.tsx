@@ -1,16 +1,16 @@
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 
 const placeholderImage = require("../assets/Placeholder_image.webp");
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View>
         <Image source={placeholderImage} resizeMode="contain" />
       </View>
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
