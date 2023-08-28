@@ -5,7 +5,9 @@ export default function WishlistScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={{ fontFamily: "Lato_400Regular" }}>My wishlist</Text>
+        <Text style={{ fontFamily: "Lato_400Regular", fontSize: 32 }}>
+          My wishlist
+        </Text>
       </View>
       <StatusBar style="auto" />
     </View>

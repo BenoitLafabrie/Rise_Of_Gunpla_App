@@ -1,13 +1,13 @@
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
-
-const placeholderImage = require("../assets/Placeholder_image.webp");
 export default function AccountScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <Image source={placeholderImage} resizeMode="contain" />
+        <Text style={{ fontFamily: "Lato_400Regular", fontSize: 32 }}>
+          My account
+        </Text>
       </View>
       <StatusBar style="auto" />
     </View>
