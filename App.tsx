@@ -1,8 +1,11 @@
 import * as React from "react";
 import { useCallback } from "react";
 import * as SplashScreen from "expo-splash-screen";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import {
+  BottomTabHeaderProps,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 import {
   useFonts,
   Lato_100Thin,
