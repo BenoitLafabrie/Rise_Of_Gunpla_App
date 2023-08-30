@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
+import { StyleSheet, TextInput, View, Keyboard } from "react-native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 
 export default function SearchBar({
@@ -19,7 +19,7 @@ export default function SearchBar({
         <Ionicons
           name="ios-search"
           size={20}
-          color="black"
+          color={clicked ? "#FB0041" : "#151515"}
           style={{ marginLeft: 1 }}
         />
         {/* Input field */}
@@ -37,26 +37,14 @@ export default function SearchBar({
           <Ionicons
             name="close"
             size={20}
-            color="black"
-            style={{ padding: 1 }}
-            onPress={() => {
-              setSearchItem("");
-            }}
-          />
-        )}
-      </View>
-      {/* cancel button, depending on whether the search bar is clicked or not */}
-      {clicked && (
-        <View>
-          <Button
-            title="Cancel"
+            color="#FB0041"
             onPress={() => {
               Keyboard.dismiss();
               setClicked(false);
             }}
-          ></Button>
-        </View>
-      )}
+          />
+        )}
+      </View>
     </View>
   );
 }
@@ -75,6 +63,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "95%",
     backgroundColor: "#fff",
+    borderWidth: 1,
     borderColor: "#FB0041",
     borderRadius: 20,
     alignItems: "center",
@@ -82,11 +71,13 @@ const styles = StyleSheet.create({
   searchBar__clicked: {
     padding: 10,
     flexDirection: "row",
-    width: "80%",
-    backgroundColor: "#d9dbda",
+    width: "95%",
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: "#FB0041",
     borderRadius: 20,
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-around",
   },
   input: {
     fontSize: 20,
