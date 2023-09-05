@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
+
 export default function AccountScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
@@ -41,6 +42,9 @@ export default function AccountScreen({ navigation }) {
           </Text>
         </View>
         <View style={{ padding: 5 }}>
+          <Pressable onPress={() => navigation.navigate("Home")}>
+            <Text style={styles.profile_button}>Back Office</Text>
+          </Pressable>
           <Pressable onPress={() => navigation.navigate("Home")}>
             <Text style={styles.profile_button}>Edit Profile</Text>
           </Pressable>
@@ -86,6 +90,7 @@ const styles = StyleSheet.create({
     marginTop: 25,
     padding: 15,
   },
+
   log_out_button: {
     fontFamily: "Lato_900Black",
     color: "#FB0041",

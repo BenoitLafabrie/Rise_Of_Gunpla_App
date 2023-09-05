@@ -27,6 +27,7 @@ import ExploreScreen from "./Screens/ExploreScreen";
 import CartScreen from "./Screens/CartScreen";
 import WishlistScreen from "./Screens/WishlistScreen";
 import AccountScreen from "./Screens/AccountScreen";
+import "react-native-gesture-handler";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
