@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function ExploreScreen() {
   const [searchItem, setSearchItem] = useState("");
   const [clicked, setClicked] = useState(false);
-  const SearchImage = require("../assets/ROG_Search.png");
 
   return (
     <View style={styles.container}>
@@ -21,7 +20,7 @@ export default function ExploreScreen() {
       </View>
       <View>
         <Image
-          source={SearchImage}
+          source={require("../assets/ROG_Search.png")}
           style={{ resizeMode: "contain", height: 600, width: 600 }}
         />
       </View>
