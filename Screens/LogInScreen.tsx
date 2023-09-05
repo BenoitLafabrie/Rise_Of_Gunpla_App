@@ -1,8 +1,8 @@
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 
-export default function LogInScreen({ navigation }) {
+export default function LogInScreen() {
   return (
     <View style={styles.container}>
       <View>

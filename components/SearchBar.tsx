@@ -1,12 +1,17 @@
 import React from "react";
 import { StyleSheet, TextInput, View, Keyboard } from "react-native";
-import { Ionicons, Entypo } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function SearchBar({
   clicked,
   searchItem,
   setSearchItem,
   setClicked,
+}: {
+  clicked: any;
+  searchItem: any;
+  setSearchItem: any;
+  setClicked: any;
 }) {
   return (
     <View style={styles.container}>

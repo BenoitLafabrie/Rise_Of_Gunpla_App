@@ -10,36 +10,19 @@ import {
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 
-export default function AccountScreen({ navigation }) {
+export default function AccountScreen({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Image
           source={require("../assets/adaptive-icon.png")}
           style={styles.account_logo}
         />
         <View>
-          <Text
-            style={{
-              fontFamily: "Lato_400Regular",
-              fontSize: 36,
-              textAlign: "center",
-            }}
-          >
-            ROG_Admin
-          </Text>
+          <Text style={styles.username}>ROG_Admin</Text>
         </View>
         <View>
-          <Text
-            style={{
-              fontFamily: "Lato_300Light",
-              fontSize: 20,
-              padding: 5,
-              textAlign: "center",
-            }}
-          >
-            ROG_Admin@riseofgunpla.com
-          </Text>
+          <Text style={styles.email}>ROG_Admin@riseofgunpla.com</Text>
         </View>
         <View style={{ padding: 5 }}>
           <Pressable onPress={() => navigation.navigate("Home")}>
@@ -75,16 +58,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   account_logo: {
-    height: 180,
-    width: 180,
+    height: 160,
+    width: 160,
     borderRadius: 20,
     alignSelf: "center",
+    marginTop: -16,
+  },
+  username: {
+    fontFamily: "Lato_400Regular",
+    fontSize: 36,
+    textAlign: "center",
+  },
+  email: {
+    fontFamily: "Lato_300Light",
+    fontSize: 20,
+    padding: 5,
+    textAlign: "center",
   },
   profile_button: {
     width: 380,
     fontFamily: "Lato_400Regular",
     textAlign: "center",
-    fontSize: 28,
+    fontSize: 24,
     borderWidth: 1,
     borderRadius: 25,
     marginTop: 25,

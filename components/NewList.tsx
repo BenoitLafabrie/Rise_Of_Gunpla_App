@@ -4,39 +4,40 @@ import { Image, FlatList, StyleSheet, Text, View } from "react-native";
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    name: "First Item",
-  },
-  {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    name: "Second Item",
+    name: "PG 1/60 GUNDAM ASTRAY RED FRAME",
+    image_box:
+      "https://riseofgunpla.com/wp-content/uploads/2020/07/pg-astrayr-boxart.webp",
+    price: "200,00€",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    name: "Third Item",
+    name: "HG 1/144 GUNDAM CALIBARN",
+    image_box:
+      "https://riseofgunpla.com/wp-content/uploads/2023/07/Gundam-Calibarn.webp",
+    price: "25,00€",
+  },
+  {
+    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+    name: "PG 1/60 GUNDAM EXIA",
+    image_box:
+      "https://riseofgunpla.com/wp-content/uploads/2020/07/pg-exia-no_led-boxart.webp",
+    price: "209,00€",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d73",
-    name: "Fourth Item",
+    name: "HG 1/144 GUNDAM AERIAL REBUILD",
+    image_box:
+      "https://riseofgunpla.com/wp-content/uploads/2023/01/image3.webp",
+    price: "25,00€",
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d74",
-    name: "Fifth Item",
+    name: "HG 1/144 GUNDAM LFRITH",
+    image_box:
+      "https://riseofgunpla.com/wp-content/uploads/2022/06/HG-Gundam-Lfrith-the-witch-from-mercury-box-art.webp",
+    price: "22,00€",
   },
 ];
-
-type ItemProps = { name: string };
-
-const Item = ({ name }: ItemProps) => (
-  <View style={styles.item}>
-    <Text style={styles.name}>{name}</Text>
-  </View>
-);
-
-const Footer = ({ name }: ItemProps) => (
-  <View style={styles.footer}>
-    <Text style={styles.name}>{name}</Text>
-  </View>
-);
 export default function NewList() {
   return (
     <View style={styles.container}>
@@ -44,13 +45,20 @@ export default function NewList() {
       <FlatList
         data={DATA}
         renderItem={({ item }) => (
-          <View style={styles.item_container}>
-            <Item name={item.name} />
-            <Footer name={item.name} />
+          <View>
+            <Image
+              source={{ uri: item.image_box }}
+              resizeMode={"center"}
+              alt={item.name}
+              style={styles.item}
+            />
+            <Text style={styles.footer}>{item.name}</Text>
+            <Text style={styles.price}>{item.price}</Text>
           </View>
         )}
         keyExtractor={(item) => item.id}
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
@@ -60,30 +68,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    marginBottom: 32,
   },
   item: {
-    backgroundColor: "#f9c2ff",
-    padding: 20,
     marginHorizontal: 8,
-    marginTop: 8,
     height: 250,
-    width: 280,
+    width: 250,
     maxHeight: 250,
     maxWidth: 280,
+    marginBottom: -8,
   },
   name: {
-    fontSize: 24,
+    fontSize: 18,
+    color: "#FB0041",
   },
   title_section: {
     fontSize: 42,
     color: "#FB0041",
     backgroundColor: "#fff",
+    fontWeight: "700",
+    marginBottom: -16,
   },
-  item_container: {
-    flex: 1,
-  },
+
   footer: {
-    paddingTop: 8,
     paddingLeft: 8,
+    marginTop: -16,
+  },
+  price: {
+    paddingLeft: 8,
+    color: "#FB0041",
+    fontWeight: "700",
   },
 });

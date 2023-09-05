@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 
-export default function CartScreen({ navigation }) {
+export default function CartScreen({ navigation }: { navigation: any }) {
   return (
     <View style={styles.container}>
       <View>

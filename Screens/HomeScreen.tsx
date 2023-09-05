@@ -1,4 +1,4 @@
-import { Image, StyleSheet, View, ScrollView, Text } from "react-native";
+import { ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import * as React from "react";
 import NewList from "../components/NewList";
