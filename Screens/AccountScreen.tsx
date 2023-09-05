@@ -33,14 +33,14 @@ export default function AccountScreen({ navigation }) {
             style={{
               fontFamily: "Lato_300Light",
               fontSize: 20,
-              marginTop: 10,
+              padding: 5,
               textAlign: "center",
             }}
           >
             ROG_Admin@riseofgunpla.com
           </Text>
         </View>
-        <View>
+        <View style={{ padding: 5 }}>
           <Pressable onPress={() => navigation.navigate("Home")}>
             <Text style={styles.profile_button}>Edit Profile</Text>
           </Pressable>
@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   account_logo: {
-    height: 200,
-    width: 200,
+    height: 180,
+    width: 180,
     borderRadius: 20,
     alignSelf: "center",
   },
@@ -82,9 +82,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 28,
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 25,
     marginTop: 25,
-    padding: 10,
+    padding: 15,
   },
   log_out_button: {
     fontFamily: "Lato_900Black",
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     fontSize: 28,
     borderWidth: 1,
     borderColor: "#FB0041",
-    borderRadius: 20,
+    borderRadius: 25,
     marginTop: 25,
-    padding: 10,
+    padding: 15,
   },
 });
