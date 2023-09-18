@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     color: "#FB0041",
   },
   title_section: {
-    fontSize: 42,
+    fontSize: 32,
     color: "#FB0041",
     backgroundColor: "#fff",
     fontWeight: "700",

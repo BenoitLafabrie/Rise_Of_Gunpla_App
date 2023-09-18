@@ -15,6 +15,15 @@ export default function CartScreen({ navigation }: { navigation: any }) {
               fontFamily: "Lato_400Regular",
               fontSize: 30,
               color: "#FB0041",
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 3.84,
+
+              elevation: 5,
             }}
           >
             let's go shopping!

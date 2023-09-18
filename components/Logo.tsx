@@ -5,7 +5,7 @@ export default function Logo(): React.JSX.Element {
     <View style={styles.container}>
       <Image
         source={require("../assets/ROG_Cover_transparent.png")}
-        resizeMode={"center"}
+        style={{ objectFit: "contain", width: "90%" }}
       />
     </View>
   );
@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     alignItems: "center",
-    paddingTop: 10,
+    paddingTop: 15,
   },
 });

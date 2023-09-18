@@ -21,7 +21,12 @@ export default function ExploreScreen() {
       <View>
         <Image
           source={require("../assets/ROG_Search.png")}
-          style={{ resizeMode: "contain", height: 600, width: 600 }}
+          style={{
+            resizeMode: "contain",
+            height: 600,
+            width: 600,
+            opacity: 0.5,
+          }}
         />
       </View>
       <StatusBar style="auto" />
