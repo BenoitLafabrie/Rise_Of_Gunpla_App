@@ -26,9 +26,6 @@ export default function AccountScreen({ navigation }: { navigation: any }) {
         </View>
         <View style={{ padding: 5 }}>
           <Pressable onPress={() => navigation.navigate("Home")}>
-            <Text style={styles.profile_button}>Back Office</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate("Home")}>
             <Text style={styles.profile_button}>Edit Profile</Text>
           </Pressable>
           <Pressable onPress={() => navigation.navigate("Home")}>
@@ -38,7 +35,10 @@ export default function AccountScreen({ navigation }: { navigation: any }) {
             <Text style={styles.profile_button}>My payment methods</Text>
           </Pressable>
           <Pressable onPress={() => navigation.navigate("Home")}>
-            <Text style={styles.profile_button}>Support</Text>
+            <Text style={styles.profile_button}>FAQ</Text>
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Home")}>
+            <Text style={styles.profile_button}>Back Office</Text>
           </Pressable>
           <Pressable onPress={() => navigation.navigate("Home")}>
             <Text style={styles.log_out_button}>Log out</Text>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Image, FlatList, StyleSheet, Text, View } from "react-native";
 
-const DATA = [
+const PopularData = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     name: "RG 1/144 HI-NU GUNDAM RX-93-2",
@@ -43,7 +43,7 @@ export default function PopularList() {
     <View style={styles.container}>
       <Text style={styles.title_section}>Popular</Text>
       <FlatList
-        data={DATA}
+        data={PopularData}
         renderItem={({ item }) => (
           <View>
             <Image

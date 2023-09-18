@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Rise_Of_Gunpla",
-    "slug": "Rise_Of_Gunpla",
+    "slug": "rise-of-gunpla",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "experiments": {
       "tsconfigPaths": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0672ea9d-154d-4439-bab4-0e69bc5bb496"
+      }
+    },
+    "owner": "hinomura"
   }
 }

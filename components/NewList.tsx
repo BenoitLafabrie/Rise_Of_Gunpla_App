@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Image, FlatList, StyleSheet, Text, View } from "react-native";
 
-const DATA = [
+const NewData = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
     name: "PG 1/60 GUNDAM ASTRAY RED FRAME",
@@ -43,7 +43,7 @@ export default function NewList() {
     <View style={styles.container}>
       <Text style={styles.title_section}>New</Text>
       <FlatList
-        data={DATA}
+        data={NewData}
         renderItem={({ item }) => (
           <View>
             <Image
