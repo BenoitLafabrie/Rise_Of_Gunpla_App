@@ -1,13 +1,13 @@
 class User {
-  #id: number;
-  #username: string = "";
-  #firstName: string = "";
-  #lastName: string = "";
-  #email: string = "";
-  #password: string = "";
-  #address: string = "";
-  #expo_push_token: string = "";
-  #user_avatar_pic: string = "";
+  #id;
+  #username = "";
+  #firstName = "";
+  #lastName = "";
+  #email = "";
+  #password = "";
+  #address = "";
+  #expo_push_token = "";
+  #user_avatar_pic = "";
 
   //getters
   get id() {

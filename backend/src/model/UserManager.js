@@ -28,7 +28,7 @@ async function insertUser(data) {
 
       return { status: 201, message: bodyResponse };
     })
-    .catch((error: { status: number; message: string }) => {
+    .catch((error) => {
       return { status: 500, message: error };
     });
 }

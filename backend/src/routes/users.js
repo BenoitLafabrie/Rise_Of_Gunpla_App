@@ -5,7 +5,7 @@ const readUserController = require("../controller/userControllers/ReadUserContro
 const readOneUserController = require("../controller/userControllers/ReadOneUserController");
 const updateUserController = require("../controller/userControllers/UpdateUserController");
 const deleteUserController = require("../controller/userControllers/DeleteUserController");
-const securityMiddleware = require("../middleware/securityMiddleware");
+const securityMiddleware = require("../middleware/SecurityMiddleware");
 
 /* POST : create a new user. */
 router.post("/", createUserController);
