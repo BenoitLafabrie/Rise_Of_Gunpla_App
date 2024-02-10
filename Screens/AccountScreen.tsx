@@ -1,3 +1,5 @@
+import { StatusBar } from "expo-status-bar";
+import * as React from "react";
 import {
   Image,
   Pressable,
@@ -7,8 +9,6 @@ import {
   Text,
   View,
 } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import * as React from "react";
 
 export default function AccountScreen({ navigation }: { navigation: any }) {
   return (
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.5,
     shadowRadius: 3.84,
 
     elevation: 5,
