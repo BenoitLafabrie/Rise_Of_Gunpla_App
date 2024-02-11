@@ -86,6 +86,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignSelf: "center",
     marginTop: -12,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 1,
+      height: 4,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 3.84,
   },
   username: {
     fontFamily: "Lato_400Regular",

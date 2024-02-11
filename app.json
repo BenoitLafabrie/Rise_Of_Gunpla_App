@@ -34,6 +34,9 @@
         "projectId": "0672ea9d-154d-4439-bab4-0e69bc5bb496"
       }
     },
-    "owner": "hinomura"
+    "owner": "hinomura",
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

@@ -1,13 +1,4 @@
-import * as React from "react";
-import { useCallback, useState, useEffect, useRef } from "react";
-import * as SplashScreen from "expo-splash-screen";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import {
-  BottomTabHeaderProps,
-  createBottomTabNavigator,
-} from "@react-navigation/bottom-tabs";
-import {
-  useFonts,
   Lato_100Thin,
   Lato_100Thin_Italic,
   Lato_300Light,
@@ -18,19 +9,23 @@ import {
   Lato_700Bold_Italic,
   Lato_900Black,
   Lato_900Black_Italic,
+  useFonts,
 } from "@expo-google-fonts/lato";
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialIcons } from "@expo/vector-icons";
-import Logo from "./components/Logo";
-import HomeScreen from "./Screens/HomeScreen";
-import ExploreScreen from "./Screens/ExploreScreen";
-import CartScreen from "./Screens/CartScreen";
-import WishlistScreen from "./Screens/WishlistScreen";
-import AccountScreen from "./Screens/AccountScreen";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
-import Constants from "expo-constants";
+import * as SplashScreen from "expo-splash-screen";
+import * as React from "react";
+import { useCallback, useEffect } from "react";
 import { Platform } from "react-native";
+import AccountScreen from "./Screens/AccountScreen";
+import CartScreen from "./Screens/CartScreen";
+import ExploreScreen from "./Screens/ExploreScreen";
+import HomeScreen from "./Screens/HomeScreen";
+import WishlistScreen from "./Screens/WishlistScreen";
+import Logo from "./components/Logo";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -113,7 +108,7 @@ export default function App() {
             tabBarLabel: "Home",
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name="ios-home-sharp"
+                name="home-sharp"
                 size={32}
                 color={focused ? "#FB0041" : "#151515"}
               />
@@ -127,7 +122,7 @@ export default function App() {
             tabBarLabel: "Explore",
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name="ios-search"
+                name="search"
                 size={32}
                 color={focused ? "#FB0041" : "#151515"}
               />
@@ -141,7 +136,7 @@ export default function App() {
             tabBarLabel: "Cart",
             tabBarIcon: ({ focused }) => (
               <Ionicons
-                name="ios-cart"
+                name="cart"
                 size={32}
                 color={focused ? "#FB0041" : "#151515"}
               />

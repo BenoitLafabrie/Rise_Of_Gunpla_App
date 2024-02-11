@@ -1,6 +1,6 @@
-import React from "react";
-import { StyleSheet, TextInput, View, Keyboard } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { Keyboard, StyleSheet, TextInput, View } from "react-native";
 
 export default function SearchBar({
   clicked,
@@ -22,7 +22,7 @@ export default function SearchBar({
       >
         {/* search Icon */}
         <Ionicons
-          name="ios-search"
+          name="search"
           size={20}
           color={clicked ? "#FB0041" : "#151515"}
           style={{ marginLeft: 1 }}
